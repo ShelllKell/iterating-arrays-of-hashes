@@ -125,17 +125,16 @@ class Dogs
       find_owner = []
       @dogs.each do |dog|
         owner = dog[:owner][:name].values
-        p " ??????"
         if dog[:owner][:name][:first] == name
           find_owner.push({name: dog[:name]})
         elsif dog[:owner][:name][:last] == name
           find_owner.push({name: dog[:name]})
         elsif owner[0] + " " + owner[1] == name
           find_owner.push({name: dog[:name]})
-          p "<<<<<<"
+
         end
       end
-      p "  jj"
+
     p find_owner
 
   end
